@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LXGalleryView_Example' do
+  pod 'LXGalleryView', :path => '../'
+
+  target 'LXGalleryView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
