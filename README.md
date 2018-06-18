@@ -32,20 +32,19 @@ pod 'LXGalleryView'
 Create a 'LXGalleryView' Instance.
 ```swift
 let frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 230)
-let galleryView = LXGalleryView(frame: carouselFrame, delegate: self, dataSource: self)
+let galleryView = LXGalleryView(frame: frame, delegate: self, dataSource: self)
 
 self.view.addSubview(galleryView)
 ```
 
 Register a custom cell to the LXGalleryView. Cell size automatically adjusts to 'LXGalleryView' bounds.
 ```swift
-galleryView.galleryCollection.register(UINib(nibName: "customCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
+galleryView.galleryCollection.register(UINib(nibName: "myCustomCell", bundle: Bundle.main), forCellWithReuseIdentifier: "myCell")
 ```
 
 Implement the 'LXGalleryViewDataSource' protocol.
 ```swift
-@objc public protocol LXGalleryViewDataSource
-{
+@objc public protocol LXGalleryViewDataSource {
 func galleryView(_ galleryView: LXGalleryView, numberOfItemsInSection section: Int) -> Int
 func galleryView(_ galleryView: LXGalleryView, cellForItemAt: IndexPath) -> UICollectionViewCell
 }
@@ -59,7 +58,7 @@ galleryView.setButtonImages(left: UIImage, right: UIImage, for state: UIControlS
 
 Public Properties:
 ```swift
-galleryView.galleryCollection: CarouselCollection // wrapped CarouselCollection (Subclass of UICollectionView)
+galleryView.galleryCollection: LXGalleryViewCollection // wrapped CarouselCollection (Subclass of UICollectionView)
 galleryView.dataSource: LXGalleryDataSource // dataSource
 galleryView.delegate: LXGalleryDelegate // delegate
 galleryView.isAnimated: Bool // automatic scrolling
@@ -72,10 +71,9 @@ galleryView.areButtonsHidden: Bool // turn navigation buttons on or off
 
 Delegate protocol:
 ```swift
-@objc public protocol CarouselViewDelegate
-{
-optional func carouselViewDidPaged(_ carouselView: CarouselView, toPage: Int)
-optional func carouselViewDidScroll(_ carouselView: CarouselView)
+@objc public protocol LXGalleryViewDelegate {
+optional func galleryViewDidPaged(_ galleryView: LXGalleryView, toPage: Int)
+optional func galleryViewDidScroll(_ galleryView: LXGalleryView)
 }
 ```
 
