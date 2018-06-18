@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  LXGalleryView
 //
-//  Created by leonx98 on 06/14/2018.
-//  Copyright (c) 2018 leonx98. All rights reserved.
+//  Created by Leon Hoppe on 06.14.2018.
+//  Copyright (c) 2018 Leon Hoppe. All rights reserved.
 //
 
 import UIKit

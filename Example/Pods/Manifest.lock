@@ -1,0 +1,16 @@
+PODS:
+  - LXGalleryView (1.0.0)
+
+DEPENDENCIES:
+  - LXGalleryView (from `../`)
+
+EXTERNAL SOURCES:
+  LXGalleryView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LXGalleryView: 0f1b24c023ff8d7f0ec1cf3e2743bdbbf0b3e010
+
+PODFILE CHECKSUM: 912a1eb328b89acdc23e42ba67f4b1d2067adbe0
+
+COCOAPODS: 1.5.3
